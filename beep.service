@@ -1,0 +1,9 @@
+[Unit]
+Description=Beep on startup
+After=sshd.service
+
+[Service]
+ExecStart=/usr/bin/beep -f 900 -n -f 800 -n -f 1200 -r 2
+
+[Install]
+WantedBy=default.target
